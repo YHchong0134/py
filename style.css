@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.game-area {
+    margin-bottom: 30px;
+}
+
+input[type="number"] {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 60%;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#guessButton {
+    margin-left: 10px;
+}
+
+#resetButton {
+    margin-top: 20px;
+    background-color: #f44336;
+}
+
+#resetButton:hover {
+    background-color: #da190b;
+}
+
+.result {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 50px;
+}
+
+.result.correct {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.result.too-low {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.result.too-high {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.result.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.history {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.history h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.history ul {
+    list-style: none;
+}
+
+.history li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.history li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 20px;
+    }
+    
+    input[type="number"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    #guessButton {
+        margin-left: 0;
+        width: 100%;
+    }
+}
